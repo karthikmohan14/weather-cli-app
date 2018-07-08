@@ -29,7 +29,6 @@ var geocodeAddress = (address, callback) => {
             });
         } else {
             console.log('unable to connect');
-
         }
     });
 };
