@@ -35,5 +35,9 @@ request({
     url: `https://api.darksky.net/forecast/${apikey}/${results.latitude},${results.longitude}`,
     json: true
 }, (error, response, body) => {
-    console.log(body.currently.temperature);
+    if (error) {
+        console.log('unable to fetch weather');
+    } else if (!error && response.statusCode === 200) {
+        console.log(body.currently.temperature);
+    }
 });
