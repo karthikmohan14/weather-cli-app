@@ -2,7 +2,6 @@ const request = require('request');
 
 var geocodeAddress = (address, callback) => {
     var encodedAddress = encodeURIComponent(address);
-    // var encodedAddress = encodeURIComponent('amrita school of engineering coimbatore');
     request({
         url: `http://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}`,
         // url: 'http://maps.googleapis.com/maps/api/geocode/json?address=amrita%20school%20of%20engineering%20coimbatore',
