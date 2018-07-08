@@ -27,7 +27,9 @@ var results = geocode.geocodeAddress(argv.address, (errorMessage, results) => {
             if (errorMessage) {
                 console.log(errorMessage);
             } else {
-                console.log(JSON.stringify(weatherResults, undefined, 2));
+                // console.log(JSON.stringify(weatherResults, undefined, 2));
+                console.log(`Currently at ${results.address} it's ${weatherResults.currentTemperature} °C with apparent temperature ${weatherResults.apparentTemperature} °C`);
+
             }
         });
     }
